@@ -444,5 +444,11 @@
         "name": "Fake Bank 2",
         "uuid": "fakebank2",
         "backend": "mock"
+    },
+    {
+        "docType": "Bank",
+        "name": "AqBanking",
+        "uuid": "aqbanking",
+        "backend": "aqbanking"
     }
 ]
