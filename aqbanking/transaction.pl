@@ -22,7 +22,7 @@ while (<FH>) {
     $data{$cnt}{date} = "$date{year}-$date{month}-$date{day}T$date{hour}:$date{min}:$date{sec}Z";
     $data{$cnt}{rdate} = $data{$cnt}{date};
     $cnt++;
-  } elsif ($start && /^\s*?char\s(\w+?)="(.+?)"$/g) {
+  } elsif ($start && /^\s*?char\s(\w+?)="([^"]+?)"$/g) {
     $data{$cnt}{$1} = $2;
   } elsif ($start && /^\s*?int\s*(\w+?)="(\d+?)"$/g) {
     my $num = $2;

@@ -24,9 +24,9 @@ while (<FH>) {
     $balance = 1;
   } elsif (/^\s*?}\s*#notedBalance$/g) {
     $balance = 0;
-  } elsif ($balance && /^\s*?char\svalue="(.+?)"$/g) {
+  } elsif ($balance && /^\s*?char\svalue="([^"]+?)"$/g) {
     $data{$cnt}{balance} = $1;
-  } elsif ($start && /^\s*?char\s(\w+?)="(.+?)"$/g) {
+  } elsif ($start && /^\s*?char\s(\w+?)="([^"]+?)"$/g) {
     $data{$cnt}{$1} = $2;
   }
 }
