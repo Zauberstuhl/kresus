@@ -2,7 +2,7 @@
 #
 use strict;
 
-sub currency {
+sub balance {
   my $aqb_num = shift or return 0;
   if ($aqb_num =~ /^([-\d]+?)%2F(\d+?)$/g) {
     return int($1) / int($2);
@@ -10,8 +10,9 @@ sub currency {
   return 0;
 }
 
-my %date = {};
-my ($start, $cnt, %data) = (0, 0, {});
+my (%date, %data);
+my ($start, $cnt) = (0, 0);
+
 open (FH, "<$ARGV[0]") or die $!;
 while (<FH>) {
   if (/^\s*?transaction\s*?{$/g) {
@@ -36,9 +37,9 @@ close FH;
 my $result = "{\"aqbanking\": [";
 foreach my $k (keys %data) {
   my $t = $data{$k};
-  my $currency = currency($t->{value});
+  my $balance = balance($t->{value});
   $result .= "{\"account\": \"$t->{currency}\", \"label\": \"$t->{remoteName}\", ".
-    "\"raw\": \"$t->{purpose}\", \"amount\": \"$currency\", \"rdate\": ".
+    "\"raw\": \"$t->{purpose}\", \"amount\": \"$balance\", \"rdate\": ".
     "\"$t->{rdate}\", \"date\": \"$t->{date}\", \"type\": 0}, ";
 }
 print substr($result, 0, -2) . "]}\n";
