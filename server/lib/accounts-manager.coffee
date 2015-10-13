@@ -30,6 +30,7 @@ AddBackend = (exportObject) ->
 
 AddBackend require './sources/mock'
 AddBackend require './sources/weboob'
+AddBackend require './sources/aqbanking'
 
 
 # Connect static bank information to their backends.

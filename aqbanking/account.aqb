@@ -1,0 +1,43 @@
+accountInfoList {
+  accountInfo {
+    char bankCode="12345678"
+    char bankName="Sparkasse"
+    char accountNumber="1234567890"
+    char accountName="Sichteinlagen"
+    char iban="DE2130982745927492734"
+    char bic="KARSDE66XXX"
+    char owner="Matt"
+    char currency="EUR"
+    int  accountType="0"
+    int  accountId="0"
+
+    statusList {
+      status {
+        int  time="1444729997"
+
+        bankLine {
+          char value="9999"
+          char currency="EUR"
+        } #bankLine
+
+        bookedBalance {
+          value {
+            char value="999999%2F100"
+            char currency="EUR"
+          } #value
+
+          int  time="1444729997"
+        } #bookedBalance
+
+        notedBalance {
+          value {
+            char value="100000%2F10"
+            char currency="EUR"
+          } #value
+
+          int  time="1444729997"
+        } #notedBalance
+      } #status
+    } #statusList
+  } #accountInfo
+} #accountInfoList

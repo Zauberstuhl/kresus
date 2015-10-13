@@ -13,7 +13,7 @@ sub balance {
 my %data;
 my ($start, $balance, $cnt) = (0, 0, 0);
 
-open (FH, "<$ARGV[0]") or die $!;
+open (FH, "<", "aqbanking/account.aqb") or die $!;
 while (<FH>) {
   if (/^\s*?accountInfo\s*?{$/g) {
     $start = 1;

@@ -13,7 +13,7 @@ sub balance {
 my (%date, %data);
 my ($start, $cnt) = (0, 0);
 
-open (FH, "<$ARGV[0]") or die $!;
+open (FH, "<", "aqbanking/history.aqb") or die $!;
 while (<FH>) {
   if (/^\s*?transaction\s*?{$/g) {
     $start = 1;

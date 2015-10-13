@@ -1,0 +1,77 @@
+[.....]
+
+    transactionList {
+      transaction {
+        char localCountry="de"
+        char localBankCode="662389432"
+        char localAccountNumber="12342343"
+        char localIban="DE1894723947294793"
+        char localName="Matt"
+        char localBic="KARSDE66XXX"
+        char remoteCountry="de"
+        char remoteBankCode="DEUTDEFFXXX"
+        char remoteAccountNumber="DE81283971293713"
+        char remoteName="PayPal Europe S.a.r.l. et C", "ie S.C.A"
+        int  uniqueId="0"
+        int  idForApplication="0"
+        int  groupId="0"
+
+        valutaDate {
+          date {
+            int  day="24"
+            int  month="4"
+            int  year="2014"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #valutaDate
+
+        date {
+          date {
+            int  day="24"
+            int  month="4"
+            int  year="2014"
+          } #date
+
+          int  inUtc="1"
+
+          time {
+            int  hour="12"
+            int  min="0"
+            int  sec="0"
+          } #time
+        } #date
+
+        value {
+          char value="-999%2F100"
+          char currency="EUR"
+        } #value
+
+        int  textKey="0"
+        int  textKeyExt="992"
+        char transactionKey="DDT"
+        char endToEndReference="PP.7172.PP PAYPAL"
+        int  transactionCode="105"
+        char transactionText="FOLGELASTSCHRIFT"
+        char primanota="9250"
+        char purpose="PP.7172.PP SPOTIFY, Your purchase at SPOTIFY"
+        char period="unknown"
+        int  cycle="0"
+        int  executionDay="0"
+        char type="unknown"
+        char subType="unknown"
+        char status="unknown"
+        char charge="unknown"
+        char creditorSchemeId="L12739183058"
+        char mandateId="5HJSDG4LAGHJGU"
+        char sequenceType="unknown"
+      } #transaction
+    } #transactionList
+
+[..........]
